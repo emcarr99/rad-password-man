@@ -48,6 +48,9 @@ if (specialGuy) {
   }
 
 
+  // function to dictate the length of the password
+  // isNaN checks that the user has entered a number and not a letter
+  // if user enters anything that is not a number then it will reset itself back to 0
 function getPasswordLength() {
   var userSelect = 0;
   while ((userSelect < 8) || (userSelect > 128)) {
@@ -59,6 +62,7 @@ function getPasswordLength() {
   return userSelect;
 }
 
+// function to condense user choices
 function getSelect(currentChoice) {
   var userSelect = "a",
     messagePrompt= "";
@@ -67,6 +71,7 @@ function getSelect(currentChoice) {
   while (userSelect = "a") {
     userSelect = (prompt(messagePrompt));
     userSelect = userSelect.toLowerCase();
+    // added to allow users to type freely and not worry about case sensitivity
     if (userSelect == "yes") {
       return true;
     } else if (userSelect ==  "no") {
