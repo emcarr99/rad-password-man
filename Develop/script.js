@@ -14,7 +14,7 @@ var charType = false;
 while (charType == false) {
   var lowCase = getSelect("lowercase");
   var upperCaseSet = getSelect("uppercase");
-  var number = getSelect("numeric");
+  var numbers = getSelect("numeric");
   var special = getSelect("special");
   if ((lowCase) || (upperCaseSet) || (number) || (special)) {
     charType = true;
@@ -40,7 +40,7 @@ if (special) {
 }
 
   var passwordString = "";
-  // This loop will take the appended array, randomly select elements from it, then append the selections to a string, generating the password.
+ 
   for (var i = 0; i < passwordLength; i++) {
     passwordString += selectArray[Math.floor(Math.random() * (selectArray.length))];
   }
