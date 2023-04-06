@@ -1,6 +1,9 @@
 // Assignment code here
 function generatePassword() {
-
+// array of uppercase letters
+// array of numbers
+// array of special characters
+// to hold password being built
 var lowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCaseSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9"];
@@ -10,7 +13,7 @@ var selectArray = [];
 var passwordLength = getPasswordLength();
 
 var charTypeSelected = false;
-
+// loop that ensures the user chooses at least one character type
 while (charTypeSelected == false) {
   var lowCases = getSelect("lowercase");
   var upperCase = getSelect("uppercase");
@@ -22,7 +25,7 @@ while (charTypeSelected == false) {
     alert("You must select at least one character type")
   }
 }
-
+// if statements determines the user choices and then add them to the blank array
 if (lowCases) {
   selectArray = selectArray.concat(lowCase);
 }
@@ -37,7 +40,7 @@ if (specialGuy) {
 }
 
   var passwordString = "";
- 
+//  loop will take the appended array - randomly select elements from it - then append them to a string -> thus generating the password
   for (var i = 0; i < passwordLength; i++) {
     passwordString += selectArray[Math.floor(Math.random() * (selectArray.length))];
   }
