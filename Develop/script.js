@@ -3,39 +3,36 @@ function generatePassword() {
 
 var lowCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCaseSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var number = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9"];
+var numbers = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9"];
 var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
 var selectArray = [];
 
 var passwordLength = getPasswordLength();
 
-var charType = false;
+var charTypeSelected = false;
 
-while (charType == false) {
-  var lowCase = getSelect("lowercase");
-  var upperCaseSet = getSelect("uppercase");
-  var numbers = getSelect("numeric");
-  var special = getSelect("special");
+while (charTypeSelected == false) {
+  var lowCases = getSelect("lowercase");
+  var upperCase = getSelect("uppercase");
+  var numbSet = getSelect("numeric");
+  var specialGuy = getSelect("special");
   if ((lowCase) || (upperCaseSet) || (number) || (special)) {
-    charType = true;
+    charTypeSelected= true;
   } else {
     alert("You must select at least one character type")
   }
 }
 
-if (lowCase) {
+if (lowCases) {
   selectArray = selectArray.concat(lowCase);
 }
-
-if (upperCaseSet) {
+if (upperCase) {
   selectArray = selectArray.concat(upperCaseSet);
 }
-
-if (numbers) {
+if (numbSet) {
   selectArray = selectArray.concat(numbers);
 }
-
-if (special) {
+if (specialGuy) {
   selectArray= selectArray.concat(special);
 }
 
@@ -51,7 +48,7 @@ if (special) {
 function getPasswordLength() {
   var userSelect = 0;
   while ((userSelect < 8) || (userSelect > 128)) {
-    userSelect =parseInt(prompt("Enter the number of characters you want, between 8 and 128:"));
+    userSelect =parseInt(prompt("Enter the number of characters you want, between 8 and 128: "));
     if (isNaN(userSelect)) {
       userSelect = 0;
     }
