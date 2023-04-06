@@ -39,3 +39,4 @@ After answering all those hard-hitting questions, your shiny new password will a
 
 
 ## License
+MIT
