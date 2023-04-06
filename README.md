@@ -9,7 +9,7 @@ N/A
 ## Usage
 You can access the generator here: 
 
-After clicking the link above, you will then click the "Generate" button as seen here:
+After clicking the link above, you will then click the "Generate" button as seen here: https://emcarr99.github.io/rad-password-man/
 
 <img src="./Assets\Images\genpasswordbutton.jpg">
 
