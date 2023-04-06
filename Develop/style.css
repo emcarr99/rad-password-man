@@ -74,11 +74,11 @@ header {
 
 .btn {
   border: none;
-  background-color: #2F3E46(360, 91%, 36%);
+  background-color: #52796F(360, 91%, 36%);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: black(0, 0%, 100%);
+  color: #2F3E46(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
