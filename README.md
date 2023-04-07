@@ -7,9 +7,9 @@ In Challenge 3 students were given starter code that allowed them to write the n
 N/A
 
 ## Usage
-You can access the generator here: 
+You can access the generator here:  https://emcarr99.github.io/rad-password-man/
 
-After clicking the link above, you will then click the "Generate" button as seen here: https://emcarr99.github.io/rad-password-man/
+After clicking the link above, you will then click the "Generate" button as seen here:
 
 <img src="./Assets\Images\genpasswordbutton.jpg">
 
